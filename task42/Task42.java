@@ -5,7 +5,7 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 42 - Написать метод(методы) для нахождения наибольшего общего делителя четырех натуральных чисел.
+/*	Task 42 - РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹) РґР»СЏ РЅР°С…РѕР¶РґРµРЅРёСЏ РЅР°РёР±РѕР»СЊС€РµРіРѕ РѕР±С‰РµРіРѕ РґРµР»РёС‚РµР»СЏ С‡РµС‚С‹СЂРµС… РЅР°С‚СѓСЂР°Р»СЊРЅС‹С… С‡РёСЃРµР».
  * 
  * 
  */
@@ -26,7 +26,7 @@ public class Task42 {
 		d = 0;
 		n = 4;
 		
-		// Ввод чисел 				
+		// Р’РІРѕРґ С‡РёСЃРµР» 				
 		Scanner input = new Scanner(System.in);
 		try {
 			a  = (int) CommonTools.readBetween(input, "a", Types.INT, CommonTools.ZERO, 
@@ -43,15 +43,15 @@ public class Task42 {
 			}
 		input.close();
 		
-		// поиск НОК и НОД
+		// РїРѕРёСЃРє РќРћРљ Рё РќРћР”
 		nOD = getNOD(n, a, b, c, d);
 		
-		// 	вывод результатов
-		System.out.println("результаты");
+		// 	РІС‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ
+		System.out.println("СЂРµР·СѓР»СЊС‚Р°С‚С‹");
 		if (nOD == 0) {
-			System.out.println("НОД не найдено");
+			System.out.println("РќРћР” РЅРµ РЅР°Р№РґРµРЅРѕ");
 		} else {
-			System.out.println("НОД = " + nOD);
+			System.out.println("РќРћР” = " + nOD);
 		}
 	}
 	

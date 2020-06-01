@@ -5,7 +5,7 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 46 Написать метод(методы), проверяющий, являются ли данные три числа взаимно простыми.
+/*	Task 46 РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹), РїСЂРѕРІРµСЂСЏСЋС‰РёР№, СЏРІР»СЏСЋС‚СЃСЏ Р»Рё РґР°РЅРЅС‹Рµ С‚СЂРё С‡РёСЃР»Р° РІР·Р°РёРјРЅРѕ РїСЂРѕСЃС‚С‹РјРё.
  * 
  * 
  */
@@ -24,7 +24,7 @@ public class Task46 {
 		result = "";
 		
 		Scanner input = new Scanner(System.in);
-		// Ввод чисел	
+		// Р’РІРѕРґ С‡РёСЃРµР»	
 		try {
 		a  = (int) CommonTools.readBetween(input, "a", Types.INT, 1, 
 											CommonTools.MAX_INT, false, true);
@@ -37,13 +37,13 @@ public class Task46 {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// Проверка чисел на взаимную простоту
+		// РџСЂРѕРІРµСЂРєР° С‡РёСЃРµР» РЅР° РІР·Р°РёРјРЅСѓСЋ РїСЂРѕСЃС‚РѕС‚Сѓ
 		isSimple = checkSimpleMultiple(a, b, c);
 		if (!isSimple) {
-			result = "не";
+			result = "РЅРµ";
 		}
-		// 		Вывод результата
-		System.out.println("Числа a, b, с " + result + " являются взаимно простыми");	
+		// 		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		System.out.println("Р§РёСЃР»Р° a, b, СЃ " + result + " СЏРІР»СЏСЋС‚СЃСЏ РІР·Р°РёРјРЅРѕ РїСЂРѕСЃС‚С‹РјРё");	
 	}
 
 	public static boolean checkSimpleMultiple(int ... args) {

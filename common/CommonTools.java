@@ -28,7 +28,7 @@ public class CommonTools {
 		
 		if (rightBorder > leftBorder) {
 			while (true) {
-				System.out.println("Введите " + name);
+				System.out.println("Р’РІРµРґРёС‚Рµ " + name);
 				switch (type) {
 					case INT:
 						if (input.hasNextInt()) {
@@ -41,10 +41,10 @@ public class CommonTools {
 								x = xInt;
 								return x;
 							} else {
-								System.out.println(xInt + " вне диапазона");
+								System.out.println(xInt + " РІРЅРµ РґРёР°РїР°Р·РѕРЅР°");
 							}
 						} else {
-							System.out.println(input.next() + " не число");
+							System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 						}
 						break;
 					case FLOAT:	
@@ -58,10 +58,10 @@ public class CommonTools {
 								x = xFloat;
 								return x;
 							} else {
-								System.out.println(xFloat + " вне диапазона");
+								System.out.println(xFloat + " РІРЅРµ РґРёР°РїР°Р·РѕРЅР°");
 							}
 						} else {
-							System.out.println(input.next() + " не число");
+							System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 						}
 						break;
 					case DOUBLE:	
@@ -75,10 +75,10 @@ public class CommonTools {
 								x = xDouble;
 								return x;
 							} else {
-								System.out.println(xDouble + " вне диапазона");
+								System.out.println(xDouble + " РІРЅРµ РґРёР°РїР°Р·РѕРЅР°");
 							}
 						} else {
-							System.out.println(input.next() + " не число");
+							System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 						}
 						break;
 					}

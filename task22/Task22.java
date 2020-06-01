@@ -7,7 +7,7 @@ import java.util.Scanner;
 import by.module2.task11.Task11;
 
 /*  @author Yury Zmushko
- * 	Task 2.2. Дана квадратная матрица. Вывести на экран элементы, стоящие на диагонали.
+ * 	Task 2.2. Р”Р°РЅР° РєРІР°РґСЂР°С‚РЅР°СЏ РјР°С‚СЂРёС†Р°. Р’С‹РІРµСЃС‚Рё РЅР° СЌРєСЂР°РЅ СЌР»РµРјРµРЅС‚С‹, СЃС‚РѕСЏС‰РёРµ РЅР° РґРёР°РіРѕРЅР°Р»Рё.
  * 
  */
 public class Task22 {
@@ -23,24 +23,24 @@ public class Task22 {
 		
 		Scanner input = new Scanner(System.in);
 		while (true) {
-			System.out.println("Введите n");
+			System.out.println("Р’РІРµРґРёС‚Рµ n");
 			if (input.hasNextInt()) {
 				n  = input.nextInt();
 				break;
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				while (true) {
-					System.out.println("Введите A[" + i + "]" + "[" + j + "]");
+					System.out.println("Р’РІРµРґРёС‚Рµ A[" + i + "]" + "[" + j + "]");
 					if (input.hasNextInt()) {
 						a[i][j]  = input.nextInt();
 						break;
 					} else {
-						System.out.println(input.next() + " не число");
+						System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 					}
 				}
 			}	

@@ -10,8 +10,8 @@ import by.module2.task11.Task11;
 
 
 /*  @author Yury Zmushko
- * 	Task 2.9. Задана матрица неотрицательных чисел. Посчитать сумму элементов в каждом столбце. Определить, какой 
- * столбец содержит максимальную сумму.
+ * 	Task 2.9. Р—Р°РґР°РЅР° РјР°С‚СЂРёС†Р° РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… С‡РёСЃРµР». РџРѕСЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ СЌР»РµРјРµРЅС‚РѕРІ РІ РєР°Р¶РґРѕРј СЃС‚РѕР»Р±С†Рµ. РћРїСЂРµРґРµР»РёС‚СЊ, РєР°РєРѕР№ 
+ * СЃС‚РѕР»Р±РµС† СЃРѕРґРµСЂР¶РёС‚ РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋ СЃСѓРјРјСѓ.
  */
 public class Task29 {
 
@@ -30,7 +30,7 @@ public class Task29 {
 		n = 0;
 		
 		Scanner input = new Scanner(System.in);
-		// Ввод размерностей массива				
+		// Р’РІРѕРґ СЂР°Р·РјРµСЂРЅРѕСЃС‚РµР№ РјР°СЃСЃРёРІР°				
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, CommonTools.ZERO, 
 											CommonTools.MAX_INT, false, true);
@@ -39,9 +39,9 @@ public class Task29 {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// 		Заполнение массива		
+		// 		Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР°		
 		a = CommonTools.makeArray(input, n, m, "A", Types.FLOAT, CommonTools.ZERO, CommonTools.MAX_FLOAT, true, true);
-		// 		Подсчет сумм и выбор максимальной
+		// 		РџРѕРґСЃС‡РµС‚ СЃСѓРјРј Рё РІС‹Р±РѕСЂ РјР°РєСЃРёРјР°Р»СЊРЅРѕР№
 		for (int j = 0; j < m; j++) {
 			sum = 0;
 			for (int i = 0; i < n; i++) {
@@ -52,15 +52,15 @@ public class Task29 {
 				nMaxSum = j;
 			}
 		}
-		//		Вывод массива		
+		//		Р’С‹РІРѕРґ РјР°СЃСЃРёРІР°		
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				System.out.print("A[" + i + "]" + "[" + j + "]= " + a[i][j] + "	");
 			}
 			System.out.println();
 		}
-		//		Вывод результата			
-		System.out.println("Максимальная сумма - в столбце № " + nMaxSum 
-							+ " и равна " + maxSum);
+		//		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°			
+		System.out.println("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ СЃСѓРјРјР° - РІ СЃС‚РѕР»Р±С†Рµ в„– " + nMaxSum 
+							+ " Рё СЂР°РІРЅР° " + maxSum);
 	}	
 }

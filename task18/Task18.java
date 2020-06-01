@@ -7,8 +7,8 @@ import java.util.Scanner;
 import by.module2.task11.Task11;
 
 /*  @author Yury Zmushko
- * 	Task 1.8. Дана последовательность целых чисел a1,a2,?,an . Образовать новую последовательность, выбросив из 
- * исходной те члены, которые равны min(a1,a2,?,an) .
+ * 	Task 1.8. Р”Р°РЅР° РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ С†РµР»С‹С… С‡РёСЃРµР» a1,a2,?,an . РћР±СЂР°Р·РѕРІР°С‚СЊ РЅРѕРІСѓСЋ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ, РІС‹Р±СЂРѕСЃРёРІ РёР· 
+ * РёСЃС…РѕРґРЅРѕР№ С‚Рµ С‡Р»РµРЅС‹, РєРѕС‚РѕСЂС‹Рµ СЂР°РІРЅС‹ min(a1,a2,?,an) .
  * 
  */
 public class Task18 {
@@ -22,22 +22,22 @@ public class Task18 {
 		
 		Scanner input = new Scanner(System.in);
 		while (true) {
-			System.out.println("Введите n");
+			System.out.println("Р’РІРµРґРёС‚Рµ n");
 			if (input.hasNextInt()) {
 				n  = input.nextInt();
 				break;
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		for (int j = 0; j < n; j++) {
 			while (true) {
-				System.out.println("Введите A[" + j + "]");
+				System.out.println("Р’РІРµРґРёС‚Рµ A[" + j + "]");
 				if (input.hasNextInt()) {
 					a[j]  = input.nextInt();
 					break;
 				} else {
-					System.out.println(input.next() + " не число");
+					System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 				}
 			}	
 		}

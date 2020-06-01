@@ -6,9 +6,9 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 4.14. Натуральное число, в записи которого n цифр, называется числом Армстронга, если сумма его цифр,
-возведенная в степень n, равна самому числу. Найти все числа Армстронга от 1 до k. Для решения задачи
-использовать декомпозицию.
+/*	Task 4.14. РќР°С‚СѓСЂР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ, РІ Р·Р°РїРёСЃРё РєРѕС‚РѕСЂРѕРіРѕ n С†РёС„СЂ, РЅР°Р·С‹РІР°РµС‚СЃСЏ С‡РёСЃР»РѕРј РђСЂРјСЃС‚СЂРѕРЅРіР°, РµСЃР»Рё СЃСѓРјРјР° РµРіРѕ С†РёС„СЂ,
+РІРѕР·РІРµРґРµРЅРЅР°СЏ РІ СЃС‚РµРїРµРЅСЊ n, СЂР°РІРЅР° СЃР°РјРѕРјСѓ С‡РёСЃР»Сѓ. РќР°Р№С‚Рё РІСЃРµ С‡РёСЃР»Р° РђСЂРјСЃС‚СЂРѕРЅРіР° РѕС‚ 1 РґРѕ k. Р”Р»СЏ СЂРµС€РµРЅРёСЏ Р·Р°РґР°С‡Рё
+РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґРµРєРѕРјРїРѕР·РёС†РёСЋ.
  * 
  */
 public class Task414 {
@@ -20,21 +20,21 @@ public class Task414 {
 		k = 0;
 		array = new int[100];				
 		Scanner input = new Scanner(System.in);
-		// Ввод чисел	
+		// Р’РІРѕРґ С‡РёСЃРµР»	
 		try {
 		k  = (int) CommonTools.readBetween(input, "k", Types.INT, CommonTools.ZERO, 
 											CommonTools.MAX_INT, false, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// Формирование массива чисел	
+		// Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР° С‡РёСЃРµР»	
 		try {
 			array = getArmstrongNumbers(k);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		// 		Вывод результата
-		System.out.println("Числа Армстронга:");
+		// 		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		System.out.println("Р§РёСЃР»Р° РђСЂРјСЃС‚СЂРѕРЅРіР°:");
 		for (int i = 0; i < array.length - 1; i++) {
 			if (array[i] == 0) {
 				break;

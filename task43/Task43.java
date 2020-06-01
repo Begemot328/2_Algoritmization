@@ -5,8 +5,8 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 43. Вычислить площадь правильного шестиугольника со стороной а, используя метод  вычисления площади 
- * треугольника.  
+/*	Task 43. Р’С‹С‡РёСЃР»РёС‚СЊ РїР»РѕС‰Р°РґСЊ РїСЂР°РІРёР»СЊРЅРѕРіРѕ С€РµСЃС‚РёСѓРіРѕР»СЊРЅРёРєР° СЃРѕ СЃС‚РѕСЂРѕРЅРѕР№ Р°, РёСЃРїРѕР»СЊР·СѓСЏ РјРµС‚РѕРґ  РІС‹С‡РёСЃР»РµРЅРёСЏ РїР»РѕС‰Р°РґРё 
+ * С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°.  
  */
 public class Task43 {
 
@@ -19,7 +19,7 @@ public class Task43 {
 		n = 0;
 		square = 0;
 				
-		// Ввод чисел 				
+		// Р’РІРѕРґ С‡РёСЃРµР» 				
 		Scanner input = new Scanner(System.in);
 		try {
 			a  =  (double) (float) CommonTools.readBetween(input, "a", Types.FLOAT, CommonTools.ZERO, 
@@ -30,16 +30,16 @@ public class Task43 {
 				e.printStackTrace();
 			}
 		
-		// вычисление площади
+		// РІС‹С‡РёСЃР»РµРЅРёРµ РїР»РѕС‰Р°РґРё
 		
 		square = calculateSquare(a, n);
-		// 	вывод результатов
-		System.out.println("результаты");
-		System.out.println("площадь " + n + "-угольника со стороной " + a + " равна " + square);
+		// 	РІС‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ
+		System.out.println("СЂРµР·СѓР»СЊС‚Р°С‚С‹");
+		System.out.println("РїР»РѕС‰Р°РґСЊ " + n + "-СѓРіРѕР»СЊРЅРёРєР° СЃРѕ СЃС‚РѕСЂРѕРЅРѕР№ " + a + " СЂР°РІРЅР° " + square);
 	}
 	
 	public static double calculateSquare(double a, int n) {
-		// метод вычисления площади правильного n-угольника со стороной a
+		// РјРµС‚РѕРґ РІС‹С‡РёСЃР»РµРЅРёСЏ РїР»РѕС‰Р°РґРё РїСЂР°РІРёР»СЊРЅРѕРіРѕ n-СѓРіРѕР»СЊРЅРёРєР° СЃРѕ СЃС‚РѕСЂРѕРЅРѕР№ a
 		double square;
 		double radius;
 		

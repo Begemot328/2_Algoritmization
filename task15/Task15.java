@@ -5,7 +5,7 @@ package by.module2.task15;
 import java.util.Scanner;
 
 /*  @author Yury Zmushko
- * 	Task 1.5. Äàíû öåëûå ÷èñëà à1 ,à2 ,..., àn . Âûâåñòè íà ïå÷àòü òîëüêî òå ÷èñëà, äëÿ êîòîðûõ ài > i.
+ * 	Task 1.5. Ð”Ð°Ð½Ñ‹ Ñ†ÐµÐ»Ñ‹Ðµ Ñ‡Ð¸ÑÐ»Ð° Ð°1 ,Ð°2 ,..., Ð°n . Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ð½Ð° Ð¿ÐµÑ‡Ð°Ñ‚ÑŒ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð°, Ð´Ð»Ñ ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ñ… Ð°i > i.
  * 
  */
 public class Task15 {
@@ -22,18 +22,18 @@ public class Task15 {
 		
 		while (i < n) {
 			while (true) {
-				System.out.println("Ââåäèòå A[" + i + "]");
+				System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ A[" + i + "]");
 				if (input.hasNextInt()) {
 					A[i]  = input.nextInt();
 					break;
 				} else {
-						System.out.println(input.next() + " íå ÷èñëî");
+						System.out.println(input.next() + " Ð½Ðµ Ñ‡Ð¸ÑÐ»Ð¾");
 				}
 			}		
 			i++;
 		}
 		input.close();
-		System.out.println("Èçìåíåííûé ìàññèâ ");
+		System.out.println("Ð˜Ð·Ð¼ÐµÐ½ÐµÐ½Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² ");
 		i = 0;
 		while (i < n) {
 			if (A[i] > i) {

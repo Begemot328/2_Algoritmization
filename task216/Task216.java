@@ -11,10 +11,10 @@ import by.module2.common.Types;
 import by.module2.task11.Task11;
 
 /*  @author Yury Zmushko
- * 	Task 2.16. Магическим квадратом порядка n называется квадратная матрица размера 
- * nxn, составленная из чисел 1, 2, 3, ..., 2 n так, что суммы по каждому столбцу, 
- * каждой строке и каждой из двух больших диагоналей равны между собой. Построить 
- * такой квадрат. Пример магического квадрата порядка 3:
+ * 	Task 2.16. РњР°РіРёС‡РµСЃРєРёРј РєРІР°РґСЂР°С‚РѕРј РїРѕСЂСЏРґРєР° n РЅР°Р·С‹РІР°РµС‚СЃСЏ РєРІР°РґСЂР°С‚РЅР°СЏ РјР°С‚СЂРёС†Р° СЂР°Р·РјРµСЂР° 
+ * nxn, СЃРѕСЃС‚Р°РІР»РµРЅРЅР°СЏ РёР· С‡РёСЃРµР» 1, 2, 3, ..., 2 n С‚Р°Рє, С‡С‚Рѕ СЃСѓРјРјС‹ РїРѕ РєР°Р¶РґРѕРјСѓ СЃС‚РѕР»Р±С†Сѓ, 
+ * РєР°Р¶РґРѕР№ СЃС‚СЂРѕРєРµ Рё РєР°Р¶РґРѕР№ РёР· РґРІСѓС… Р±РѕР»СЊС€РёС… РґРёР°РіРѕРЅР°Р»РµР№ СЂР°РІРЅС‹ РјРµР¶РґСѓ СЃРѕР±РѕР№. РџРѕСЃС‚СЂРѕРёС‚СЊ 
+ * С‚Р°РєРѕР№ РєРІР°РґСЂР°С‚. РџСЂРёРјРµСЂ РјР°РіРёС‡РµСЃРєРѕРіРѕ РєРІР°РґСЂР°С‚Р° РїРѕСЂСЏРґРєР° 3:
  * 
  */
 public class Task216 {
@@ -41,7 +41,7 @@ public class Task216 {
 		sumProjected = 0;
 		Scanner input = new Scanner(System.in);
 		
-// Ввод размерности массива				
+// Р’РІРѕРґ СЂР°Р·РјРµСЂРЅРѕСЃС‚Рё РјР°СЃСЃРёРІР°				
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, CommonTools.ZERO, 
 											CommonTools.MAX_INT, false, true);
@@ -52,10 +52,10 @@ public class Task216 {
 		sumProjected = (1 + n * n) * n * n / (2 * n);
 		System.out.println("sumProjected " + sumProjected);
 		
-// Составление магического квадрата		
+// РЎРѕСЃС‚Р°РІР»РµРЅРёРµ РјР°РіРёС‡РµСЃРєРѕРіРѕ РєРІР°РґСЂР°С‚Р°		
 		a = makeMagicSquare(n);
 		
-// Проверка магического квадрата	
+// РџСЂРѕРІРµСЂРєР° РјР°РіРёС‡РµСЃРєРѕРіРѕ РєРІР°РґСЂР°С‚Р°	
 		for (int i = 0; i < n; i++) {
 			sumPrimary += a[i][i];
 			sumSecondary += a[n - i - 1][i];
@@ -64,12 +64,12 @@ public class Task216 {
 				sum += a[i][j];
 			}
 			if (sum != sumProjected) {
-				System.out.println("Ошибка, квадрат не совсем магический" + sum + " " + i);
+				System.out.println("РћС€РёР±РєР°, РєРІР°РґСЂР°С‚ РЅРµ СЃРѕРІСЃРµРј РјР°РіРёС‡РµСЃРєРёР№" + sum + " " + i);
 				break;
 			}
 		}
 		if (sumSecondary != sumProjected || sumPrimary != sumProjected) {
-			System.out.println("Ошибка, квадрат не совсем магический");
+			System.out.println("РћС€РёР±РєР°, РєРІР°РґСЂР°С‚ РЅРµ СЃРѕРІСЃРµРј РјР°РіРёС‡РµСЃРєРёР№");
 		}
 		
 
@@ -77,8 +77,8 @@ public class Task216 {
 		System.out.println("sumPrimary " + sumPrimary);
 		System.out.println("sumPrimary " + sumPrimary);
 
-//		Вывод массива		
-		System.out.println("Конечный массив");	
+//		Р’С‹РІРѕРґ РјР°СЃСЃРёРІР°		
+		System.out.println("РљРѕРЅРµС‡РЅС‹Р№ РјР°СЃСЃРёРІ");	
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				System.out.print("A[" + i + "]" + "[" + j + "]= " + a[i][j] + "	");

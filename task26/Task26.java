@@ -7,7 +7,7 @@ import java.util.Scanner;
 import by.module2.task11.Task11;
 
 /*  @author Yury Zmushko
- * 	Task 2.6. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
+ * 	Task 2.6. РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РєРІР°РґСЂР°С‚РЅСѓСЋ РјР°С‚СЂРёС†Сѓ РїРѕСЂСЏРґРєР° n РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РѕР±СЂР°Р·С†Сѓ(n - С‡РµС‚РЅРѕРµ):
  * 
  */
 public class Task26 {
@@ -18,31 +18,31 @@ public class Task26 {
 		int m;
 		final int ONE = 1;
 		
-		// Ввод размерности массива				
+		// Р’РІРѕРґ СЂР°Р·РјРµСЂРЅРѕСЃС‚Рё РјР°СЃСЃРёРІР°				
 		Scanner input = new Scanner(System.in);
 		while (true) {
-			System.out.println("Введите n");
+			System.out.println("Р’РІРµРґРёС‚Рµ n");
 			if (input.hasNextInt()) {
 				n  = input.nextInt();
 				m = n / 2;
 				if ((m * 2) == n) {
 					break;
 				} else {
-					System.out.println(n + " не четное");
+					System.out.println(n + " РЅРµ С‡РµС‚РЅРѕРµ");
 				}
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		input.close(); 
-// 		Заполнение массива		
+// 		Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР°		
 		for (int i = 0; i <= m; i++) {
 			for (int j = i; j < n - i; j++) {
 				a[i][j] = ONE;
 				a[(n - i - 1)][j] = ONE;
 			}
 		}
-//		Вывод массива		
+//		Р’С‹РІРѕРґ РјР°СЃСЃРёРІР°		
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				System.out.print(a[i][j] + "	");

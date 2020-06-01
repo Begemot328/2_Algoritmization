@@ -8,8 +8,8 @@ import by.module2.task11.Task11;
 
 
 /*  @author Yury Zmushko
- * 	Task 1.6. Задана последовательность N вещественных чисел. Вычислить сумму чисел, порядковые номера которых
-являются простыми числами.
+ * 	Task 1.6. Р—Р°РґР°РЅР° РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ N РІРµС‰РµСЃС‚РІРµРЅРЅС‹С… С‡РёСЃРµР». Р’С‹С‡РёСЃР»РёС‚СЊ СЃСѓРјРјСѓ С‡РёСЃРµР», РїРѕСЂСЏРґРєРѕРІС‹Рµ РЅРѕРјРµСЂР° РєРѕС‚РѕСЂС‹С…
+СЏРІР»СЏСЋС‚СЃСЏ РїСЂРѕСЃС‚С‹РјРё С‡РёСЃР»Р°РјРё.
  * 
  */
 public class Task16 {
@@ -26,19 +26,19 @@ public class Task16 {
 		
 		for (int i = 0; i < n; i++) {
 			while (true) {
-				System.out.println("Введите A[" + i + "]");
+				System.out.println("Р’РІРµРґРёС‚Рµ A[" + i + "]");
 				if (input.hasNextInt()) {
 					A[i]  = input.nextInt();
 					break;
 				} else {
-						System.out.println(input.next() + " не число");
+						System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 				}
 			}	
 		}
 		input.close();
 		for (int j = 0; j < n; j++) {
 			if(ifSimple(A[j])) {
-				System.out.println("Простое число A[" + j + "]=" + A[j]);
+				System.out.println("РџСЂРѕСЃС‚РѕРµ С‡РёСЃР»Рѕ A[" + j + "]=" + A[j]);
 			}
 		}
 	}

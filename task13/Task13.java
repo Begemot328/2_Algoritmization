@@ -5,8 +5,8 @@ package by.module2.task13;
 import java.util.Scanner;
 
 /*  @author Yury Zmushko
- * 	Task 1.3. Дан массив действительных чисел, размерность которого N. Подсчитать, сколько в нем отрицательных,
-положительных и нулевых элементов.
+ * 	Task 1.3. Р”Р°РЅ РјР°СЃСЃРёРІ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹С… С‡РёСЃРµР», СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ РєРѕС‚РѕСЂРѕРіРѕ N. РџРѕРґСЃС‡РёС‚Р°С‚СЊ, СЃРєРѕР»СЊРєРѕ РІ РЅРµРј РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С…,
+РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… Рё РЅСѓР»РµРІС‹С… СЌР»РµРјРµРЅС‚РѕРІ.
  * 
  */
 public class Task13 {
@@ -30,12 +30,12 @@ public class Task13 {
 		
 		while (i < n) {
 			while (true) {
-				System.out.println("Введите A[" + i + "]");
+				System.out.println("Р’РІРµРґРёС‚Рµ A[" + i + "]");
 				if (input.hasNextInt()) {
 					A[i]  = input.nextFloat();
 					break;
 				} else {
-					System.out.println(input.next() + " не число");
+					System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 				}
 			}				
 			if (A[i] > 0) {
@@ -49,8 +49,8 @@ public class Task13 {
 			i++;
 		}
 		input.close();
-		System.out.println("Количество положительных " + positiveQuantity);
-		System.out.println("Количество отрицательных " + negativeQuantity);
-		System.out.println("Количество нулей " + zeroQuantity);
+		System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… " + positiveQuantity);
+		System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… " + negativeQuantity);
+		System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РЅСѓР»РµР№ " + zeroQuantity);
 	}
 }

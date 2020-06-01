@@ -5,7 +5,7 @@ package by.module2.task14;
 import java.util.Scanner;
 
 /*  @author Yury Zmushko
- * 	Task 1.14. Даны действительные числа а1 ,а2 ,..., аn . Поменять местами наибольший и наименьший элементы.
+ * 	Task 1.14. Р”Р°РЅС‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹Рµ С‡РёСЃР»Р° Р°1 ,Р°2 ,..., Р°n . РџРѕРјРµРЅСЏС‚СЊ РјРµСЃС‚Р°РјРё РЅР°РёР±РѕР»СЊС€РёР№ Рё РЅР°РёРјРµРЅСЊС€РёР№ СЌР»РµРјРµРЅС‚С‹.
  * 
  */
 public class Task14 {
@@ -28,12 +28,12 @@ public class Task14 {
 		
 		while (i < n) {
 			while (true) {
-				System.out.println("Введите A[" + i + "]");
+				System.out.println("Р’РІРµРґРёС‚Рµ A[" + i + "]");
 				if (input.hasNextInt()) {
 					a[i]  = input.nextFloat();
 					break;
 				} else {
-						System.out.println(input.next() + " не число");
+						System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 				}
 			}		
 			System.out.println("A[" + i + "]=" + a[i]);
@@ -48,7 +48,7 @@ public class Task14 {
 		substitution = a[maxIndex];
 		a[maxIndex] = a[minIndex];
 		a[minIndex] = substitution;
-		System.out.println("Измененный массив ");
+		System.out.println("РР·РјРµРЅРµРЅРЅС‹Р№ РјР°СЃСЃРёРІ ");
 		i = 0;
 		while (i < n) {
 			System.out.println("A[" + i + "]=" + a[i]);

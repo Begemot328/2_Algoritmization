@@ -7,7 +7,7 @@ import java.util.Scanner;
 import by.module2.task11.Task11;
 
 /*  @author Yury Zmushko
- * 	Task 2.1. Дана матрица. Вывести на экран все нечетные столбцы, у которых первый элемент больше последнего.
+ * 	Task 2.1. Р”Р°РЅР° РјР°С‚СЂРёС†Р°. Р’С‹РІРµСЃС‚Рё РЅР° СЌРєСЂР°РЅ РІСЃРµ РЅРµС‡РµС‚РЅС‹Рµ СЃС‚РѕР»Р±С†С‹, Сѓ РєРѕС‚РѕСЂС‹С… РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ Р±РѕР»СЊС€Рµ РїРѕСЃР»РµРґРЅРµРіРѕ.
  * 
  */
 public class Task21 {
@@ -20,33 +20,33 @@ public class Task21 {
 		
 		Scanner input = new Scanner(System.in);
 		while (true) {
-			System.out.println("Введите n");
+			System.out.println("Р’РІРµРґРёС‚Рµ n");
 			if (input.hasNextInt()) {
 				n  = input.nextInt();
 				break;
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		while (true) {
-			System.out.println("Введите m");
+			System.out.println("Р’РІРµРґРёС‚Рµ m");
 			if (input.hasNextInt()) {
 				m  = input.nextInt();
 				break;
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				while (true) {
-					System.out.println("Введите A[" + i + "]" + "[" + j + "]");
+					System.out.println("Р’РІРµРґРёС‚Рµ A[" + i + "]" + "[" + j + "]");
 					if (input.hasNextInt()) {
 						a[i][j]  = input.nextInt();
 						break;
 					} else {
-						System.out.println(input.next() + " не число");
+						System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 					}
 				}
 			}	

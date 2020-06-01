@@ -22,7 +22,7 @@ public class Task212 {
 		n = 0;
 		Scanner input = new Scanner(System.in);
 		
-// Ввод размерностей массива				
+// Р’РІРѕРґ СЂР°Р·РјРµСЂРЅРѕСЃС‚РµР№ РјР°СЃСЃРёРІР°				
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, CommonTools.ZERO, 
 											CommonTools.MAX_INT, false, true);
@@ -32,12 +32,12 @@ public class Task212 {
 			e.printStackTrace();
 		}
 	
-// 		Заполнение массива		
+// 		Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР°		
 		a = CommonTools.makeArray(input, n, m, "A", Types.INT, CommonTools.MIN_INT, CommonTools.MAX_INT, true, true);
 		input.close();
 		
-//		Вывод массива
-		System.out.println("Исходный массив");	
+//		Р’С‹РІРѕРґ РјР°СЃСЃРёРІР°
+		System.out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ");	
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				System.out.print("A[" + i + "]" + "[" + j + "]= " + a[i][j] + "	");
@@ -45,11 +45,11 @@ public class Task212 {
 			System.out.println();
 		}		
 		
-// 		Сортировка
+// 		РЎРѕСЂС‚РёСЂРѕРІРєР°
 		b = CommonTools.sortArrayRows(a, n, m);
 		
-//		Вывод массива		
-		System.out.println("Конечный массив");	
+//		Р’С‹РІРѕРґ РјР°СЃСЃРёРІР°		
+		System.out.println("РљРѕРЅРµС‡РЅС‹Р№ РјР°СЃСЃРёРІ");	
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				System.out.print("A[" + i + "]" + "[" + j + "]= " + a[i][j] + "	");

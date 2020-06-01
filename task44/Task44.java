@@ -5,8 +5,8 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 44 На плоскости заданы своими координатами n точек. Написать метод(методы), определяющие, между какими
- * из пар точек самое большое расстояние. Указание. Координаты точек занести в массив. 
+/*	Task 44 РќР° РїР»РѕСЃРєРѕСЃС‚Рё Р·Р°РґР°РЅС‹ СЃРІРѕРёРјРё РєРѕРѕСЂРґРёРЅР°С‚Р°РјРё n С‚РѕС‡РµРє. РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹), РѕРїСЂРµРґРµР»СЏСЋС‰РёРµ, РјРµР¶РґСѓ РєР°РєРёРјРё
+ * РёР· РїР°СЂ С‚РѕС‡РµРє СЃР°РјРѕРµ Р±РѕР»СЊС€РѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ. РЈРєР°Р·Р°РЅРёРµ. РљРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РµРє Р·Р°РЅРµСЃС‚Рё РІ РјР°СЃСЃРёРІ. 
  * 
  * 
  */
@@ -24,23 +24,23 @@ public class Task44 {
 		maxDistance = 0;
 		
 		Scanner input = new Scanner(System.in);
-		// Ввод размерностей массива точек			
+		// Р’РІРѕРґ СЂР°Р·РјРµСЂРЅРѕСЃС‚РµР№ РјР°СЃСЃРёРІР° С‚РѕС‡РµРє			
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, CommonTools.MIN_INT, 
 											CommonTools.MAX_INT, false, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// 		Заполнение массива точек		
-		coords = CommonTools.makeArray(input, n, 2, "Координаты точки", Types.INT, 
+		// 		Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° С‚РѕС‡РµРє		
+		coords = CommonTools.makeArray(input, n, 2, "РљРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РєРё", Types.INT, 
 				CommonTools.ZERO, CommonTools.MAX_INT, false, true);
 		input.close();
-		// 		Нахождение максимального расстояния	
+		// 		РќР°С…РѕР¶РґРµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ СЂР°СЃСЃС‚РѕСЏРЅРёСЏ	
 		result = findMaxDistance(n, coords);
 		maxDistance = findDistance(coords[result[0]], coords[result[1]]);
-		// 		Вывод результата
-		System.out.println("Наибольшее расстояние - между точками " + result[0] 
-							+ " и " + result[1] + " и составляет " + maxDistance);	
+		// 		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		System.out.println("РќР°РёР±РѕР»СЊС€РµРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ - РјРµР¶РґСѓ С‚РѕС‡РєР°РјРё " + result[0] 
+							+ " Рё " + result[1] + " Рё СЃРѕСЃС‚Р°РІР»СЏРµС‚ " + maxDistance);	
 	}
 	
 	public static double findDistance(Number[] pointA, Number[] pointB) {

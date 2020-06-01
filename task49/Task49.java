@@ -6,8 +6,8 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 49. Даны числа X, Y, Z, Т — длины сторон четырехугольника. Написать метод(методы) вычисления его площади,
-если угол между сторонами длиной X и Y— прямой.
+/*	Task 49. Р”Р°РЅС‹ С‡РёСЃР»Р° X, Y, Z, Рў вЂ” РґР»РёРЅС‹ СЃС‚РѕСЂРѕРЅ С‡РµС‚С‹СЂРµС…СѓРіРѕР»СЊРЅРёРєР°. РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹) РІС‹С‡РёСЃР»РµРЅРёСЏ РµРіРѕ РїР»РѕС‰Р°РґРё,
+РµСЃР»Рё СѓРіРѕР» РјРµР¶РґСѓ СЃС‚РѕСЂРѕРЅР°РјРё РґР»РёРЅРѕР№ X Рё YвЂ” РїСЂСЏРјРѕР№.
  * 
  */
 public class Task49 {
@@ -27,7 +27,7 @@ public class Task49 {
 		square = 0;
 						
 		Scanner input = new Scanner(System.in);
-		// Ввод чисел	
+		// Р’РІРѕРґ С‡РёСЃРµР»	
 		try {
 		x  = (double) CommonTools.readBetween(input, "x", Types.DOUBLE, 0, 
 											CommonTools.MAX_DOUBLE, false, true);
@@ -40,7 +40,7 @@ public class Task49 {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// Нахождение площади
+		// РќР°С…РѕР¶РґРµРЅРёРµ РїР»РѕС‰Р°РґРё
 		try {
 			hypotenuse = getHypotenuse(x, y);
 			square = getSquareTriangle(hypotenuse, z, t);
@@ -48,8 +48,8 @@ public class Task49 {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		// 		Вывод результата
-		System.out.println("Площадь  четырехугольника равна " + square);	
+		// 		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		System.out.println("РџР»РѕС‰Р°РґСЊ  С‡РµС‚С‹СЂРµС…СѓРіРѕР»СЊРЅРёРєР° СЂР°РІРЅР° " + square);	
 	}
 
 	private static double getHypotenuse(double x, double y) throws IOException {

@@ -12,7 +12,7 @@ import by.module2.task11.Task11;
 import by.module2.task29.*;
 
 /*  @author Yury Zmushko
- * 	Task 2.10. Найти положительные элементы главной диагонали квадратной матрицы.
+ * 	Task 2.10. РќР°Р№С‚Рё РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ РіР»Р°РІРЅРѕР№ РґРёР°РіРѕРЅР°Р»Рё РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹.
  * 
  */
 public class Task210 {
@@ -34,20 +34,20 @@ public class Task210 {
 		
 		Scanner input = new Scanner(System.in);
 		
-// Ввод размерностей массива				
+// Р’РІРѕРґ СЂР°Р·РјРµСЂРЅРѕСЃС‚РµР№ РјР°СЃСЃРёРІР°				
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, CommonTools.ZERO, 
 											CommonTools.MAX_INT, false, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-// 		Заполнение массива		
+// 		Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР°		
 		a = CommonTools.makeArray(input, n, n, "A", Types.FLOAT, CommonTools.MIN_FLOAT, CommonTools.MAX_FLOAT, true, true);
 		
-// 		Выбор положительных элементов
+// 		Р’С‹Р±РѕСЂ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ
 		for (int j = 0; j < n; j++) {
 			if ((float)a[j][j] > 0) {
-				System.out.println("A[" + j + "]" + "[" + j + "]= " + a[j][j] + "	больше нуля   ");
+				System.out.println("A[" + j + "]" + "[" + j + "]= " + a[j][j] + "	Р±РѕР»СЊС€Рµ РЅСѓР»СЏ   ");
 			}
 		}
 	}	

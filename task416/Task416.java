@@ -6,8 +6,8 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 4.16. Написать программу, определяющую сумму n - значных чисел, содержащих только нечетные цифры.
- * Определить также, сколько четных цифр в найденной сумме. Для решения задачи использовать декомпозицию.
+/*	Task 4.16. РќР°РїРёСЃР°С‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РѕРїСЂРµРґРµР»СЏСЋС‰СѓСЋ СЃСѓРјРјСѓ n - Р·РЅР°С‡РЅС‹С… С‡РёСЃРµР», СЃРѕРґРµСЂР¶Р°С‰РёС… С‚РѕР»СЊРєРѕ РЅРµС‡РµС‚РЅС‹Рµ С†РёС„СЂС‹.
+ * РћРїСЂРµРґРµР»РёС‚СЊ С‚Р°РєР¶Рµ, СЃРєРѕР»СЊРєРѕ С‡РµС‚РЅС‹С… С†РёС„СЂ РІ РЅР°Р№РґРµРЅРЅРѕР№ СЃСѓРјРјРµ. Р”Р»СЏ СЂРµС€РµРЅРёСЏ Р·Р°РґР°С‡Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґРµРєРѕРјРїРѕР·РёС†РёСЋ.
  * 
  */
 public class Task416 {
@@ -23,20 +23,20 @@ public class Task416 {
 		evenQuantity = 0;
 		array = new int[100];				
 		Scanner input = new Scanner(System.in);
-		// Ввод чисел	
+		// Р’РІРѕРґ С‡РёСЃРµР»	
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, CommonTools.ZERO, 
 											CommonTools.MAX_INT, false, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// Формирование массива чисел	
+		// Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР° С‡РёСЃРµР»	
 		try {			
 			array = getSpecialNumbers(n);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		// Подсчет суммы	
+		// РџРѕРґСЃС‡РµС‚ СЃСѓРјРјС‹	
 		for (int i = 0; i < array.length - 1; i++) {
 			sum += array[i];
 			System.out.println(array[i]);
@@ -46,8 +46,8 @@ public class Task416 {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}			
-		// 		Вывод результата
-		System.out.println("Сумма чисел равна " + sum + " и содержит " + evenQuantity + " четных цифр");
+		// 		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		System.out.println("РЎСѓРјРјР° С‡РёСЃРµР» СЂР°РІРЅР° " + sum + " Рё СЃРѕРґРµСЂР¶РёС‚ " + evenQuantity + " С‡РµС‚РЅС‹С… С†РёС„СЂ");
 		System.out.println("That's all, folks!");
 	}
 	

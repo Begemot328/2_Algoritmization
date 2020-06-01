@@ -7,7 +7,7 @@ import java.util.Scanner;
 import by.module2.task11.Task11;
 
 /*  @author Yury Zmushko
- * 	Task 1.7. Даны действительные числа a1,a2,?,an . Найти max( a1 + a2n,a2 + a2n−1,?,an + an+1) .
+ * 	Task 1.7. Р”Р°РЅС‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹Рµ С‡РёСЃР»Р° a1,a2,?,an . РќР°Р№С‚Рё max( a1 + a2n,a2 + a2nв€’1,?,an + an+1) .
  * 
  */
 public class Task17 {
@@ -22,22 +22,22 @@ public class Task17 {
 		
 		Scanner input = new Scanner(System.in);
 		while (true) {
-			System.out.println("Введите n");
+			System.out.println("Р’РІРµРґРёС‚Рµ n");
 			if (input.hasNextInt()) {
 				n  = input.nextInt();
 				break;
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		for (int i = 0; i < n; i++) {
 			while (true) {
-				System.out.println("Введите A[" + i + "]");
+				System.out.println("Р’РІРµРґРёС‚Рµ A[" + i + "]");
 				if (input.hasNextInt()) {
 					A[i]  = input.nextFloat();
 					break;
 				} else {
-					System.out.println(input.next() + " не число");
+					System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 				}
 			}	
 		}
@@ -49,6 +49,6 @@ public class Task17 {
 		if (m * 2 != n) {
 			max = Math.max(max, A[m] * 2);	
 		}
-		System.out.println("Максимум " + max);
+		System.out.println("РњР°РєСЃРёРјСѓРј " + max);
 	}
 }

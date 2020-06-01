@@ -11,7 +11,7 @@ import by.module2.common.Types;
 import by.module2.task11.Task11;
 
 /*  @author Yury Zmushko
- * 	Task 2.15. Найдите наибольший элемент матрицы и заменить все нечетные элементы на него.
+ * 	Task 2.15. РќР°Р№РґРёС‚Рµ РЅР°РёР±РѕР»СЊС€РёР№ СЌР»РµРјРµРЅС‚ РјР°С‚СЂРёС†С‹ Рё Р·Р°РјРµРЅРёС‚СЊ РІСЃРµ РЅРµС‡РµС‚РЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ РЅР° РЅРµРіРѕ.
  * 
  */
 public class Task215 {
@@ -28,7 +28,7 @@ public class Task215 {
 		max = CommonTools.MIN_INT;
 		Scanner input = new Scanner(System.in);
 		
-// Ввод размерностей массива				
+// Р’РІРѕРґ СЂР°Р·РјРµСЂРЅРѕСЃС‚РµР№ РјР°СЃСЃРёРІР°				
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, CommonTools.ZERO, 
 											CommonTools.MAX_INT, false, true);
@@ -38,12 +38,12 @@ public class Task215 {
 			e.printStackTrace();
 		}
 	
-// 		Заполнение массива		
+// 		Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР°		
 		a = CommonTools.makeArray(input, n, m, "A", Types.INT, CommonTools.MIN_INT, CommonTools.MAX_INT, true, true);
 		input.close();
 		
-//		Вывод массива
-		System.out.println("Исходный массив");	
+//		Р’С‹РІРѕРґ РјР°СЃСЃРёРІР°
+		System.out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ");	
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				System.out.print("A[" + i + "]" + "[" + j + "]= " + a[i][j] + "	");
@@ -51,7 +51,7 @@ public class Task215 {
 			System.out.println();
 		}		
 		
-// 		Поиск максимума
+// 		РџРѕРёСЃРє РјР°РєСЃРёРјСѓРјР°
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				if ((int) a[i][j] > max) {
@@ -60,7 +60,7 @@ public class Task215 {
 			}
 		}	
 		
-// 		Замена нечетных 
+// 		Р—Р°РјРµРЅР° РЅРµС‡РµС‚РЅС‹С… 
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				if (((int) a[i][j]) % 2 != 0) {
@@ -69,8 +69,8 @@ public class Task215 {
 			}
 		}	
 		
-//		Вывод массива		
-		System.out.println("Конечный массив");	
+//		Р’С‹РІРѕРґ РјР°СЃСЃРёРІР°		
+		System.out.println("РљРѕРЅРµС‡РЅС‹Р№ РјР°СЃСЃРёРІ");	
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				System.out.print("A[" + i + "]" + "[" + j + "]= " + a[i][j] + "	");

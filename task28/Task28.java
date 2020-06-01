@@ -7,9 +7,9 @@ import java.util.Scanner;
 import by.module2.task11.Task11;
 
 /*  @author Yury Zmushko
- * 	Task 2.8. В числовой матрице поменять местами два столбца любых столбца, т. е. все элементы одного столбца поставить 
- * на соответствующие им позиции другого, а его элементы второго переместить в первый. Номера столбцов вводит
- * пользователь с клавиатуры.
+ * 	Task 2.8. Р’ С‡РёСЃР»РѕРІРѕР№ РјР°С‚СЂРёС†Рµ РїРѕРјРµРЅСЏС‚СЊ РјРµСЃС‚Р°РјРё РґРІР° СЃС‚РѕР»Р±С†Р° Р»СЋР±С‹С… СЃС‚РѕР»Р±С†Р°, С‚. Рµ. РІСЃРµ СЌР»РµРјРµРЅС‚С‹ РѕРґРЅРѕРіРѕ СЃС‚РѕР»Р±С†Р° РїРѕСЃС‚Р°РІРёС‚СЊ 
+ * РЅР° СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ РёРј РїРѕР·РёС†РёРё РґСЂСѓРіРѕРіРѕ, Р° РµРіРѕ СЌР»РµРјРµРЅС‚С‹ РІС‚РѕСЂРѕРіРѕ РїРµСЂРµРјРµСЃС‚РёС‚СЊ РІ РїРµСЂРІС‹Р№. РќРѕРјРµСЂР° СЃС‚РѕР»Р±С†РѕРІ РІРІРѕРґРёС‚
+ * РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹.
  * 
  */
 public class Task28 {
@@ -22,88 +22,88 @@ public class Task28 {
 		int l;
 		float temp;
 		
-		// Ввод размерностей массива				
+		// Р’РІРѕРґ СЂР°Р·РјРµСЂРЅРѕСЃС‚РµР№ РјР°СЃСЃРёРІР°				
 		Scanner input = new Scanner(System.in);
 		while (true) {
-			System.out.println("Введите n");
+			System.out.println("Р’РІРµРґРёС‚Рµ n");
 			if (input.hasNextInt()) {
 				n  = input.nextInt();
 				if(n > 0) {
 					break;
 				} else {
-					System.out.println(input.next() + " не положительное число");
+					System.out.println(input.next() + " РЅРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ");
 				}
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		
 		while (true) {
-			System.out.println("Введите m");
+			System.out.println("Р’РІРµРґРёС‚Рµ m");
 			if (input.hasNextInt()) {
 				m  = input.nextInt();
 				if(m > 0) {
 					break;
 				} else {
-					System.out.println(input.next() + " не положительное число");
+					System.out.println(input.next() + " РЅРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ");
 				}
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		
-// 		Заполнение массива		
+// 		Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР°		
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				while (true) {
-					System.out.println("Введите A[" + i + "]" + "[" + j + "]");
+					System.out.println("Р’РІРµРґРёС‚Рµ A[" + i + "]" + "[" + j + "]");
 					if (input.hasNextInt()) {
 						a[i][j]  = input.nextInt();
 						break;
 					} else {
-						System.out.println(input.next() + " не число");
+						System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 					}
 				}
 			}	
 		}
-// Ввод номеров заменяемых столбцов массива
+// Р’РІРѕРґ РЅРѕРјРµСЂРѕРІ Р·Р°РјРµРЅСЏРµРјС‹С… СЃС‚РѕР»Р±С†РѕРІ РјР°СЃСЃРёРІР°
 		while (true) {
-			System.out.println("Введите k");
+			System.out.println("Р’РІРµРґРёС‚Рµ k");
 			if (input.hasNextInt()) {
 				k  = input.nextInt();
 				if(k > 0 && k < m) {
 					break;
 				} else {
-					System.out.println(input.next() + " некорректное число");
+					System.out.println(input.next() + " РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ");
 				}
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		
 		while (true) {
-			System.out.println("Введите l");
+			System.out.println("Р’РІРµРґРёС‚Рµ l");
 			if (input.hasNextInt()) {
 				l  = input.nextInt();
 				if(l > 0 && l < m && l != k) {
 					break;
 				} else {
-					System.out.println(input.next() + " некорректное число");
+					System.out.println(input.next() + " РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ");
 				}
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		input.close(); 
 		
-// 		Замена столбцов		
+// 		Р—Р°РјРµРЅР° СЃС‚РѕР»Р±С†РѕРІ		
 		for (int i = 0; i < n; i++) {
 			temp = a[i][k];
 			a[i][k] = a[i][l];
 			a[i][l] = temp;
 		}
 		
-//		Вывод массива		
+//		Р’С‹РІРѕРґ РјР°СЃСЃРёРІР°		
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				System.out.print("A[" + i + "]" + "[" + j + "]= " + a[i][j] + "	");

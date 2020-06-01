@@ -6,8 +6,8 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 4.17. Из заданного числа вычли сумму его цифр. Из результата вновь вычли сумму его цифр и т.д. Сколько таких
-действий надо произвести, чтобы получился нуль? Для решения задачи использовать декомпозицию.
+/*	Task 4.17. РР· Р·Р°РґР°РЅРЅРѕРіРѕ С‡РёСЃР»Р° РІС‹С‡Р»Рё СЃСѓРјРјСѓ РµРіРѕ С†РёС„СЂ. РР· СЂРµР·СѓР»СЊС‚Р°С‚Р° РІРЅРѕРІСЊ РІС‹С‡Р»Рё СЃСѓРјРјСѓ РµРіРѕ С†РёС„СЂ Рё С‚.Рґ. РЎРєРѕР»СЊРєРѕ С‚Р°РєРёС…
+РґРµР№СЃС‚РІРёР№ РЅР°РґРѕ РїСЂРѕРёР·РІРµСЃС‚Рё, С‡С‚РѕР±С‹ РїРѕР»СѓС‡РёР»СЃСЏ РЅСѓР»СЊ? Р”Р»СЏ СЂРµС€РµРЅРёСЏ Р·Р°РґР°С‡Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґРµРєРѕРјРїРѕР·РёС†РёСЋ.
  * 
  */
 public class Task417 {
@@ -25,7 +25,7 @@ public class Task417 {
 		evenQuantity = 0;
 		array = new int[100];				
 		Scanner input = new Scanner(System.in);
-		// Ввод чисел	
+		// Р’РІРѕРґ С‡РёСЃРµР»	
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, CommonTools.ZERO, 
 											CommonTools.MAX_INT, false, true);
@@ -33,22 +33,22 @@ public class Task417 {
 			e.printStackTrace();
 		}	
 		do {
-			// Формирование массива чисел	
+			// Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР° С‡РёСЃРµР»	
 			try {			
 				array = CommonTools.getDigits(n);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 			sum = 0;
-			// Подсчет суммы	
+			// РџРѕРґСЃС‡РµС‚ СЃСѓРјРјС‹	
 			for (int i = 0; i < array.length; i++) {
 				sum += array[i];
 			}
 			n -= sum;
 			counter++;
 		} while (n > 0);		
-		// 		Вывод результата
-		System.out.println("Операция проведена " + counter + " раз");
+		// 		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		System.out.println("РћРїРµСЂР°С†РёСЏ РїСЂРѕРІРµРґРµРЅР° " + counter + " СЂР°Р·");
 		System.out.println("That's all, folks!");
 	}
 }	

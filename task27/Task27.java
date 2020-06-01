@@ -7,8 +7,8 @@ import java.util.Scanner;
 import by.module2.task11.Task11;
 
 /*  @author Yury Zmushko
- * 	Task 2.7. Сформировать квадратную матрицу порядка N по правилу:
- *  и подсчитать количество положительных элементов в ней.
+ * 	Task 2.7. РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РєРІР°РґСЂР°С‚РЅСѓСЋ РјР°С‚СЂРёС†Сѓ РїРѕСЂСЏРґРєР° N РїРѕ РїСЂР°РІРёР»Сѓ:
+ *  Рё РїРѕРґСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ РІ РЅРµР№.
  * 
  */
 public class Task27 {
@@ -23,19 +23,19 @@ public class Task27 {
 		iDouble = 0;
 		jDouble = 0;
 		positiveQuantity = 0;
-		// Ввод размерности массива				
+		// Р’РІРѕРґ СЂР°Р·РјРµСЂРЅРѕСЃС‚Рё РјР°СЃСЃРёРІР°				
 		Scanner input = new Scanner(System.in);
 		while (true) {
-			System.out.println("Введите n");
+			System.out.println("Р’РІРµРґРёС‚Рµ n");
 			if (input.hasNextInt()) {
 				n  = input.nextInt();
 				break;
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		input.close(); 
-		// Заполнение массива		
+		// Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР°		
 		for (int i = 0; i <= n; i++) {
 			for (int j = 1; j < n; j++) {
 				iDouble = i;
@@ -47,13 +47,13 @@ public class Task27 {
 				}
 			}
 		}
-//		Вывод массива		
+//		Р’С‹РІРѕРґ РјР°СЃСЃРёРІР°		
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				System.out.print("A[" + i + "]" + "[" + j + "]= " + a[i][j] + "	");
 			}
 			System.out.println();
 		}
-		System.out.println("Число положительных " + positiveQuantity);
+		System.out.println("Р§РёСЃР»Рѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… " + positiveQuantity);
 	}
 }

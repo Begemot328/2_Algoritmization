@@ -7,8 +7,8 @@ import java.util.Scanner;
 import by.module2.task11.Task11;
 
 /*  @author Yury Zmushko
- * 	Task 1.9. В массиве целых чисел с количеством элементов n найти наиболее часто встречающееся число. Если таких 
- * чисел несколько, то определить наименьшее из них.
+ * 	Task 1.9. Р’ РјР°СЃСЃРёРІРµ С†РµР»С‹С… С‡РёСЃРµР» СЃ РєРѕР»РёС‡РµСЃС‚РІРѕРј СЌР»РµРјРµРЅС‚РѕРІ n РЅР°Р№С‚Рё РЅР°РёР±РѕР»РµРµ С‡Р°СЃС‚Рѕ РІСЃС‚СЂРµС‡Р°СЋС‰РµРµСЃСЏ С‡РёСЃР»Рѕ. Р•СЃР»Рё С‚Р°РєРёС… 
+ * С‡РёСЃРµР» РЅРµСЃРєРѕР»СЊРєРѕ, С‚Рѕ РѕРїСЂРµРґРµР»РёС‚СЊ РЅР°РёРјРµРЅСЊС€РµРµ РёР· РЅРёС….
  * 
  */
 public class Task19 {
@@ -22,28 +22,28 @@ public class Task19 {
 		
 		Scanner input = new Scanner(System.in);
 		while (true) {
-			System.out.println("Введите n");
+			System.out.println("Р’РІРµРґРёС‚Рµ n");
 			if (input.hasNextInt()) {
 				n  = input.nextInt();
 				break;
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		for (int j = 0; j < n; j++) {
 			while (true) {
-				System.out.println("Введите A[" + j + "]");
+				System.out.println("Р’РІРµРґРёС‚Рµ A[" + j + "]");
 				if (input.hasNextInt()) {
 					a[j]  = input.nextInt();
 					break;
 				} else {
-					System.out.println(input.next() + " не число");
+					System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 				}
 			}	
 		}
 		input.close();
 		min = findFreqMinArray(a, n);
-		System.out.println("Чаще всего встречается число " + min);
+		System.out.println("Р§Р°С‰Рµ РІСЃРµРіРѕ РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ С‡РёСЃР»Рѕ " + min);
 	}
 	
 		

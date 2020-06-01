@@ -20,16 +20,16 @@ public class Task30 {
 		
 		Scanner input = new Scanner(System.in);
 		
-// Ввод размерностей массива				
+// Р’РІРѕРґ СЂР°Р·РјРµСЂРЅРѕСЃС‚РµР№ РјР°СЃСЃРёРІР°				
 		try {
 		n  = Task29.readIntPositive(input, "n");
 		} catch (ArithmeticException e) {
 			e.printStackTrace();
 		}
-// 		Заполнение массива		
+// 		Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР°		
 		a = Task29.makeArray(input, n, n,"A", Task29.MIN_FLOAT, Task29.MAX_FLOAT, true);	
 		
-//		Вывод массива		
+//		Р’С‹РІРѕРґ РјР°СЃСЃРёРІР°		
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				System.out.print("A[" + i + "]" + "[" + j + "]= " + a[i][j] + "	");
@@ -37,7 +37,7 @@ public class Task30 {
 			System.out.println();
 		}
 
-// 		Выбор положительных элементов
+// 		Р’С‹Р±РѕСЂ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ
 		for (int j = 0; j < n; j++) {
 			if (a[j][j] > 0) {
 				System.out.print("A[" + j + "]" + "[" + j + "]= " + a[j][j] + "	");

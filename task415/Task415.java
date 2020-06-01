@@ -6,8 +6,8 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 4.15. Найти все натуральные n-значные числа, цифры в которых образуют строго возрастающую
-последовательность (например, 1234, 5789). Для решения задачи использовать декомпозицию
+/*	Task 4.15. РќР°Р№С‚Рё РІСЃРµ РЅР°С‚СѓСЂР°Р»СЊРЅС‹Рµ n-Р·РЅР°С‡РЅС‹Рµ С‡РёСЃР»Р°, С†РёС„СЂС‹ РІ РєРѕС‚РѕСЂС‹С… РѕР±СЂР°Р·СѓСЋС‚ СЃС‚СЂРѕРіРѕ РІРѕР·СЂР°СЃС‚Р°СЋС‰СѓСЋ
+РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ (РЅР°РїСЂРёРјРµСЂ, 1234, 5789). Р”Р»СЏ СЂРµС€РµРЅРёСЏ Р·Р°РґР°С‡Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґРµРєРѕРјРїРѕР·РёС†РёСЋ
  * 
  */
 public class Task415 {
@@ -19,21 +19,21 @@ public class Task415 {
 		n = 0;
 		array = new int[100];				
 		Scanner input = new Scanner(System.in);
-		// Ввод чисел	
+		// Р’РІРѕРґ С‡РёСЃРµР»	
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, CommonTools.ZERO, 
 											CommonTools.MAX_INT, false, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// Формирование массива чисел	
+		// Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР° С‡РёСЃРµР»	
 		try {			
 			array = getSpecialNumbers(n);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		// 		Вывод результата
-		System.out.println("Искомые числа:");
+		// 		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		System.out.println("РСЃРєРѕРјС‹Рµ С‡РёСЃР»Р°:");
 		for (int i = 0; i < array.length - 1; i++) {
 			if (array[i] == 0) {
 				break;

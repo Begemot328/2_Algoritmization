@@ -5,7 +5,7 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 47 Написать метод(методы) для вычисления суммы факториалов всех нечетных чисел от 1 до 9.
+/*	Task 47 РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹) РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ СЃСѓРјРјС‹ С„Р°РєС‚РѕСЂРёР°Р»РѕРІ РІСЃРµС… РЅРµС‡РµС‚РЅС‹С… С‡РёСЃРµР» РѕС‚ 1 РґРѕ 9.
  * 
  * 
  */
@@ -19,7 +19,7 @@ public class Task47 {
 		n = 0;
 		sum = 0;
 		Scanner input = new Scanner(System.in);
-		// Ввод чисел	
+		// Р’РІРѕРґ С‡РёСЃРµР»	
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, 1, 
 											CommonTools.MAX_INT, false, true);
@@ -27,15 +27,15 @@ public class Task47 {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// Нахождение суммы
+		// РќР°С…РѕР¶РґРµРЅРёРµ СЃСѓРјРјС‹
 		for (int i = 1; i <= n; i++) {
 			if (checkIfOdd(i)) {
 			sum += getFactorial(i);
 			}
 		}
 		
-		// 		Вывод результата
-		System.out.println("Сумма факториалов от 1 до " + n + " равна " + sum);	
+		// 		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		System.out.println("РЎСѓРјРјР° С„Р°РєС‚РѕСЂРёР°Р»РѕРІ РѕС‚ 1 РґРѕ " + n + " СЂР°РІРЅР° " + sum);	
 	}
 
 	private static int getFactorial(int n) {

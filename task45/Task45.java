@@ -5,8 +5,8 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 45 Составить программу, которая в массиве A[N] находит второе по величине число (вывести на печать число,
-которое меньше максимального элемента массива, но больше всех других элементов).
+/*	Task 45 РЎРѕСЃС‚Р°РІРёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ РІ РјР°СЃСЃРёРІРµ A[N] РЅР°С…РѕРґРёС‚ РІС‚РѕСЂРѕРµ РїРѕ РІРµР»РёС‡РёРЅРµ С‡РёСЃР»Рѕ (РІС‹РІРµСЃС‚Рё РЅР° РїРµС‡Р°С‚СЊ С‡РёСЃР»Рѕ,
+РєРѕС‚РѕСЂРѕРµ РјРµРЅСЊС€Рµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РјР°СЃСЃРёРІР°, РЅРѕ Р±РѕР»СЊС€Рµ РІСЃРµС… РґСЂСѓРіРёС… СЌР»РµРјРµРЅС‚РѕРІ).
  * 
  * 
  */
@@ -24,22 +24,22 @@ public class Task45 {
 		secondMax = CommonTools.MIN_DOUBLE;
 		
 		Scanner input = new Scanner(System.in);
-		// Ввод размерностей массива			
+		// Р’РІРѕРґ СЂР°Р·РјРµСЂРЅРѕСЃС‚РµР№ РјР°СЃСЃРёРІР°			
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, CommonTools.ZERO, 
 											CommonTools.MAX_INT, false, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// 		Заполнение массива точек		
+		// 		Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° С‚РѕС‡РµРє		
 		a = CommonTools.makeArray(input, n, "A", Types.DOUBLE, 
 				CommonTools.MIN_DOUBLE, CommonTools.MAX_DOUBLE, true, true);
 		input.close();
-		// 		Нахождение максимального значение	
+		// 		РќР°С…РѕР¶РґРµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёРµ	
 		max = findMax(n, a);
 		secondMax = findSecondMax(n, a, max);
-		// 		Вывод результата
-		System.out.println("Второе максимальное число составляет " + secondMax);	
+		// 		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		System.out.println("Р’С‚РѕСЂРѕРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ СЃРѕСЃС‚Р°РІР»СЏРµС‚ " + secondMax);	
 	}
 	
 	public static double findDistance(Number[] pointA, Number[] pointB) {

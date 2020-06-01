@@ -6,9 +6,9 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 48 Задан массив D. Определить следующие суммы: D[l] + D[2] + D[3]; D[3] + D[4] + D[5]; D[4] +D[5] +D[6].
- * Пояснение. Составить метод(методы) для вычисления суммы трех последовательно расположенных элементов
- * массива с номерами от k до m.
+/*	Task 48 Р—Р°РґР°РЅ РјР°СЃСЃРёРІ D. РћРїСЂРµРґРµР»РёС‚СЊ СЃР»РµРґСѓСЋС‰РёРµ СЃСѓРјРјС‹: D[l] + D[2] + D[3]; D[3] + D[4] + D[5]; D[4] +D[5] +D[6].
+ * РџРѕСЏСЃРЅРµРЅРёРµ. РЎРѕСЃС‚Р°РІРёС‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹) РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ СЃСѓРјРјС‹ С‚СЂРµС… РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕ СЂР°СЃРїРѕР»РѕР¶РµРЅРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ
+ * РјР°СЃСЃРёРІР° СЃ РЅРѕРјРµСЂР°РјРё РѕС‚ k РґРѕ m.
  * 
  */
 public class Task48 {
@@ -27,7 +27,7 @@ public class Task48 {
 		d = new Integer[100];
 				
 		Scanner input = new Scanner(System.in);
-		// Ввод чисел	
+		// Р’РІРѕРґ С‡РёСЃРµР»	
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, 0, 
 											CommonTools.MAX_INT, false, true);
@@ -40,15 +40,15 @@ public class Task48 {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// Нахождение суммы
+		// РќР°С…РѕР¶РґРµРЅРёРµ СЃСѓРјРјС‹
 		try {
 			sum = getLineSum(d, k, m);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// 		Вывод результата
-		System.out.println("Сумма элементов от " + k + " до " + m + " равна = " + sum);	
+		// 		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		System.out.println("РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РѕС‚ " + k + " РґРѕ " + m + " СЂР°РІРЅР° = " + sum);	
 	}
 
 	private static int getLineSum(Number[] d, int k, int m) throws IOException {

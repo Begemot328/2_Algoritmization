@@ -7,8 +7,8 @@ import java.util.Scanner;
 import by.module2.task11.Task11;
 
 /*  @author Yury Zmushko
- * 	Task 1.10. Дан целочисленный массив с количеством элементов п. Сжать массив, выбросив из него каждый второй
- * элемент (освободившиеся элементы заполнить нулями). Примечание. Дополнительный массив не использовать.
+ * 	Task 1.10. Р”Р°РЅ С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹Р№ РјР°СЃСЃРёРІ СЃ РєРѕР»РёС‡РµСЃС‚РІРѕРј СЌР»РµРјРµРЅС‚РѕРІ Рї. РЎР¶Р°С‚СЊ РјР°СЃСЃРёРІ, РІС‹Р±СЂРѕСЃРёРІ РёР· РЅРµРіРѕ РєР°Р¶РґС‹Р№ РІС‚РѕСЂРѕР№
+ * СЌР»РµРјРµРЅС‚ (РѕСЃРІРѕР±РѕРґРёРІС€РёРµСЃСЏ СЌР»РµРјРµРЅС‚С‹ Р·Р°РїРѕР»РЅРёС‚СЊ РЅСѓР»СЏРјРё). РџСЂРёРјРµС‡Р°РЅРёРµ. Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ РјР°СЃСЃРёРІ РЅРµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ.
  * 
  */
 public class Task20 {
@@ -22,22 +22,22 @@ public class Task20 {
 		
 		Scanner input = new Scanner(System.in);
 		while (true) {
-			System.out.println("Введите n");
+			System.out.println("Р’РІРµРґРёС‚Рµ n");
 			if (input.hasNextInt()) {
 				n  = input.nextInt();
 				break;
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		for (int j = 0; j < n; j++) {
 			while (true) {
-				System.out.println("Введите A[" + j + "]");
+				System.out.println("Р’РІРµРґРёС‚Рµ A[" + j + "]");
 				if (input.hasNextInt()) {
 					a[j]  = input.nextInt();
 					break;
 				} else {
-					System.out.println(input.next() + " не число");
+					System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 				}
 			}	
 		}

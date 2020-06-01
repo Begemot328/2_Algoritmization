@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 import by.module2.common.CommonTools;
 import by.module2.task11.Task11;
-/*	Task 38 - Даны дроби p\q. Составить программу, которая приводит эти дроби к общему 
- *	знаменателю и упорядочивает их в порядке возрастания.
+/*	Task 38 - Р”Р°РЅС‹ РґСЂРѕР±Рё p\q. РЎРѕСЃС‚Р°РІРёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ РїСЂРёРІРѕРґРёС‚ СЌС‚Рё РґСЂРѕР±Рё Рє РѕР±С‰РµРјСѓ 
+ *	Р·РЅР°РјРµРЅР°С‚РµР»СЋ Рё СѓРїРѕСЂСЏРґРѕС‡РёРІР°РµС‚ РёС… РІ РїРѕСЂСЏРґРєРµ РІРѕР·СЂР°СЃС‚Р°РЅРёСЏ.
  * 
  * 
  */
@@ -34,46 +34,46 @@ public class Task38 {
 		k = 0;
 		divider = 0;
 		
-		// Ввод размерностей массива				
+		// Р’РІРѕРґ СЂР°Р·РјРµСЂРЅРѕСЃС‚РµР№ РјР°СЃСЃРёРІР°				
 		Scanner input = new Scanner(System.in);
 		while (true) {
-			System.out.println("Введите n");
+			System.out.println("Р’РІРµРґРёС‚Рµ n");
 			if (input.hasNextInt()) {
 				n  = input.nextInt();
 				if(n > 0) {
 					break;
 				} else {
-					System.out.println(input.next() + " не положительное число");
+					System.out.println(input.next() + " РЅРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ");
 				}
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
-		//	Заполнение массивов		
+		//	Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІРѕРІ		
 		for (int i = 0; i < n; i++) {
 				while (true) {
-				System.out.println("Введите p[" + i + "]");
+				System.out.println("Р’РІРµРґРёС‚Рµ p[" + i + "]");
 				if (input.hasNextInt()) {
 					p[i]  = input.nextInt();
-					System.out.println("Введите q[" + i + "]");
+					System.out.println("Р’РІРµРґРёС‚Рµ q[" + i + "]");
 					if (input.hasNextInt()) {
 						q[i]  = input.nextInt();
 						if (q[i] <= 0 ) {
-							System.out.println("Не положительное число");
+							System.out.println("РќРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ");
 						} else {
 						break;
 						}
 					} else {
-						System.out.println(input.next() + " не число");
+						System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 					}
 				} else {
-					System.out.println(input.next() + " не число");
+					System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 				}
 			}
 		}
 		input.close();
 		
-		// поиск НОК
+		// РїРѕРёСЃРє РќРћРљ
 		nOK = q[0];
 		for (int i = 1; i < n; i++) {
 			quotient2 = q[i];
@@ -89,17 +89,17 @@ public class Task38 {
 			nOK = nOK * q[i] / divider;
 		}
 
-		System.out.println("Общий знаменатель " + nOK); 
-		// приведение числителей к общему знаменателю
+		System.out.println("РћР±С‰РёР№ Р·РЅР°РјРµРЅР°С‚РµР»СЊ " + nOK); 
+		// РїСЂРёРІРµРґРµРЅРёРµ С‡РёСЃР»РёС‚РµР»РµР№ Рє РѕР±С‰РµРјСѓ Р·РЅР°РјРµРЅР°С‚РµР»СЋ
 		for (int i = 0; i < n; i++) {
 			p[i] = p[i] * nOK / q[i];
 		}
-		System.out.println("Приведенный массив дробей");
+		System.out.println("РџСЂРёРІРµРґРµРЅРЅС‹Р№ РјР°СЃСЃРёРІ РґСЂРѕР±РµР№");
 		for (int i = 0; i < n; i++) {
 			System.out.print("p/q[" + i + "] = " + p[i] + "/" + nOK + " ");					
 		}
 		System.out.println();
-		// сортировка Шелла для массива числителей
+		// СЃРѕСЂС‚РёСЂРѕРІРєР° РЁРµР»Р»Р° РґР»СЏ РјР°СЃСЃРёРІР° С‡РёСЃР»РёС‚РµР»РµР№
 		do {
 			if (p[counter] <= p[counter + 1]) {
 				counter++;
@@ -114,8 +114,8 @@ public class Task38 {
 			}
 		} while (counter < n - 1);
 				
-		// 	вывод массивов после сортировки
-		System.out.println("Отсортированный массив дробей");
+		// 	РІС‹РІРѕРґ РјР°СЃСЃРёРІРѕРІ РїРѕСЃР»Рµ СЃРѕСЂС‚РёСЂРѕРІРєРё
+		System.out.println("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ РґСЂРѕР±РµР№");
 		for (int i = 0; i < n; i++) {
 			System.out.print("p/q[" + i + "] = " + p[i] + "/" + nOK + " ");					
 		}

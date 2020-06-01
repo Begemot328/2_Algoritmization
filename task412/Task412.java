@@ -6,8 +6,8 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 4.12. Даны натуральные числа К и N. Написать метод(методы) формирования массива А, элементами которого
- *	являются числа, сумма цифр которых равна К и которые не большее N.
+/*	Task 4.12. Р”Р°РЅС‹ РЅР°С‚СѓСЂР°Р»СЊРЅС‹Рµ С‡РёСЃР»Р° Рљ Рё N. РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹) С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РјР°СЃСЃРёРІР° Рђ, СЌР»РµРјРµРЅС‚Р°РјРё РєРѕС‚РѕСЂРѕРіРѕ
+ *	СЏРІР»СЏСЋС‚СЃСЏ С‡РёСЃР»Р°, СЃСѓРјРјР° С†РёС„СЂ РєРѕС‚РѕСЂС‹С… СЂР°РІРЅР° Рљ Рё РєРѕС‚РѕСЂС‹Рµ РЅРµ Р±РѕР»СЊС€РµРµ N.
  * 
  */
 public class Task412 {
@@ -21,7 +21,7 @@ public class Task412 {
 		k = 0;
 		array = new int[100];				
 		Scanner input = new Scanner(System.in);
-		// Ввод чисел	
+		// Р’РІРѕРґ С‡РёСЃРµР»	
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, CommonTools.ZERO, 
 											CommonTools.MAX_INT, false, true);
@@ -30,14 +30,14 @@ public class Task412 {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// Формирование массива чисел	
+		// Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР° С‡РёСЃРµР»	
 		try {
 			array = getSpecialNumbers(n, k);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		// 		Вывод результата
-		System.out.println("Искомые числа:");
+		// 		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		System.out.println("РСЃРєРѕРјС‹Рµ С‡РёСЃР»Р°:");
 		for (int i = 0; i < n; i++) {
 			if (array[i] == 0) {
 				break;

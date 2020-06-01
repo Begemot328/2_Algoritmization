@@ -6,9 +6,9 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 4.13. Два простых числа называются «близнецами», если они отличаются друг от друга на 2 (например, 41 и 43).
- * Найти и напечатать все пары «близнецов» из отрезка [n,2n], где n - заданное натуральное число больше 2. Для
- * решения задачи использовать декомпозицию.
+/*	Task 4.13. Р”РІР° РїСЂРѕСЃС‚С‹С… С‡РёСЃР»Р° РЅР°Р·С‹РІР°СЋС‚СЃСЏ В«Р±Р»РёР·РЅРµС†Р°РјРёВ», РµСЃР»Рё РѕРЅРё РѕС‚Р»РёС‡Р°СЋС‚СЃСЏ РґСЂСѓРі РѕС‚ РґСЂСѓРіР° РЅР° 2 (РЅР°РїСЂРёРјРµСЂ, 41 Рё 43).
+ * РќР°Р№С‚Рё Рё РЅР°РїРµС‡Р°С‚Р°С‚СЊ РІСЃРµ РїР°СЂС‹ В«Р±Р»РёР·РЅРµС†РѕРІВ» РёР· РѕС‚СЂРµР·РєР° [n,2n], РіРґРµ n - Р·Р°РґР°РЅРЅРѕРµ РЅР°С‚СѓСЂР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ 2. Р”Р»СЏ
+ * СЂРµС€РµРЅРёСЏ Р·Р°РґР°С‡Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґРµРєРѕРјРїРѕР·РёС†РёСЋ.
  * 
  */
 public class Task413 {
@@ -20,27 +20,27 @@ public class Task413 {
 		n = 0;
 		array = new int[100];				
 		Scanner input = new Scanner(System.in);
-		// Ввод чисел	
+		// Р’РІРѕРґ С‡РёСЃРµР»	
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, 2, 
 											CommonTools.MAX_INT, false, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// Формирование массива чисел	
+		// Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР° С‡РёСЃРµР»	
 		try {
 			array = getSimpleNumbers(n, 2 * n);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		// 		Вывод результата
-		System.out.println("Искомые числа:");
+		// 		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		System.out.println("РСЃРєРѕРјС‹Рµ С‡РёСЃР»Р°:");
 		for (int i = 0; i < array.length - 1; i++) {
 			if (array[i + 1] == 0) {
 				break;
 			}
 			if ((array[i + 1] - array[i]) == 2) {
-				System.out.println("Простые числа-близнецы - " + array[i] + " и " + array[i + 1]);
+				System.out.println("РџСЂРѕСЃС‚С‹Рµ С‡РёСЃР»Р°-Р±Р»РёР·РЅРµС†С‹ - " + array[i] + " Рё " + array[i + 1]);
 			}
 		}
 		System.out.println("That's all, folks!");

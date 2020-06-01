@@ -13,16 +13,16 @@ import by.module2.common.Types;
 import by.module2.task29.*;
 
 /*  @author Yury Zmushko
- * 	Task 2.14. Сформировать случайную матрицу m x n, состоящую из нулей и единиц, причем в каждом столбце число 
- * единиц равно номеру столбца.
+ * 	Task 2.14. РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ СЃР»СѓС‡Р°Р№РЅСѓСЋ РјР°С‚СЂРёС†Сѓ m x n, СЃРѕСЃС‚РѕСЏС‰СѓСЋ РёР· РЅСѓР»РµР№ Рё РµРґРёРЅРёС†, РїСЂРёС‡РµРј РІ РєР°Р¶РґРѕРј СЃС‚РѕР»Р±С†Рµ С‡РёСЃР»Рѕ 
+ * РµРґРёРЅРёС† СЂР°РІРЅРѕ РЅРѕРјРµСЂСѓ СЃС‚РѕР»Р±С†Р°.
  * 
  */
 public class Task214 {
 
 	public static void main(String[] args) {
 		int a[][] = new int[30][30];
-		int n; 								//число строк
-		int m;								//число столбцов
+		int n; 								//С‡РёСЃР»Рѕ СЃС‚СЂРѕРє
+		int m;								//С‡РёСЃР»Рѕ СЃС‚РѕР»Р±С†РѕРІ
 		int bound;
 		int onesCount;
 		
@@ -32,7 +32,7 @@ public class Task214 {
 		onesCount = 0;
 		Scanner input = new Scanner(System.in);
 		
-// Ввод размерностей массива				
+// Р’РІРѕРґ СЂР°Р·РјРµСЂРЅРѕСЃС‚РµР№ РјР°СЃСЃРёРІР°				
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, CommonTools.ZERO, 
 											CommonTools.MAX_INT, false, true);
@@ -42,7 +42,7 @@ public class Task214 {
 			e.printStackTrace();
 		}
 		
-// заполнение массива		
+// Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР°		
 		Random random = new Random();
 		
 		for (int j = 0; j < m; j++) {		
@@ -58,7 +58,7 @@ public class Task214 {
 			}
 		}
 		
-//		Вывод массива		
+//		Р’С‹РІРѕРґ РјР°СЃСЃРёРІР°		
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				System.out.print("A[" + i + "]" + "[" + j + "]= " + a[i][j] + "	");

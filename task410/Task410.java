@@ -6,8 +6,8 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 4.10. Дано натуральное число N. Написать метод(методы) для формирования массива, элементами которого
-являются цифры числа N.
+/*	Task 4.10. Р”Р°РЅРѕ РЅР°С‚СѓСЂР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ N. РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹) РґР»СЏ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РјР°СЃСЃРёРІР°, СЌР»РµРјРµРЅС‚Р°РјРё РєРѕС‚РѕСЂРѕРіРѕ
+СЏРІР»СЏСЋС‚СЃСЏ С†РёС„СЂС‹ С‡РёСЃР»Р° N.
  * 
  */
 public class Task410 {
@@ -20,21 +20,21 @@ public class Task410 {
 		elements = new int[100];
 						
 		Scanner input = new Scanner(System.in);
-		// Ввод чисел	
+		// Р’РІРѕРґ С‡РёСЃРµР»	
 		try {
 		n  = (int) CommonTools.readBetween(input, "n", Types.INT, 0, 
 											CommonTools.MAX_INT, false, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// Получение массива
+		// РџРѕР»СѓС‡РµРЅРёРµ РјР°СЃСЃРёРІР°
 			try {
 				elements = CommonTools.getDigits(n);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		// 		Вывод результата
-		System.out.println("Число  " + n + " состоит из цифр:");
+		// 		Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+		System.out.println("Р§РёСЃР»Рѕ  " + n + " СЃРѕСЃС‚РѕРёС‚ РёР· С†РёС„СЂ:");
 		for (int i = 0; i < elements.length; i++) {
 			System.out.print(elements[i] + " ");
 		}

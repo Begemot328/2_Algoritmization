@@ -7,7 +7,7 @@ import java.util.Scanner;
 import by.module2.task11.Task11;
 
 /*  @author Yury Zmushko
- * 	Task 2.3. Дана матрица. Вывести k-ю строку и p-й столбец матрицы.
+ * 	Task 2.3. Р”Р°РЅР° РјР°С‚СЂРёС†Р°. Р’С‹РІРµСЃС‚Рё k-СЋ СЃС‚СЂРѕРєСѓ Рё p-Р№ СЃС‚РѕР»Р±РµС† РјР°С‚СЂРёС†С‹.
  * 
  */
 public class Task23 {
@@ -21,45 +21,45 @@ public class Task23 {
 		
 		Scanner input = new Scanner(System.in);
 		while (true) {
-			System.out.println("Введите n");
+			System.out.println("Р’РІРµРґРёС‚Рµ n");
 			if (input.hasNextInt()) {
 				n  = input.nextInt();
 				break;
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		while (true) {
-			System.out.println("Введите m");
+			System.out.println("Р’РІРµРґРёС‚Рµ m");
 			if (input.hasNextInt()) {
 				m  = input.nextInt();
 				break;
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				while (true) {
-					System.out.println("Введите A[" + i + "]" + "[" + j + "]");
+					System.out.println("Р’РІРµРґРёС‚Рµ A[" + i + "]" + "[" + j + "]");
 					if (input.hasNextInt()) {
 						a[i][j]  = input.nextInt();
 						break;
 					} else {
-						System.out.println(input.next() + " не число");
+						System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 					}
 				}
 			}	
 		}
 		
 		while (true) {
-			System.out.println("Введите k");
+			System.out.println("Р’РІРµРґРёС‚Рµ k");
 			if (input.hasNextInt()) {
 				k  = input.nextInt();
 				break;
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		
@@ -69,16 +69,16 @@ public class Task23 {
 				System.out.println("A[" + i + "]" + "[" + k + "]= " + a[i][k]);
 			}
 		} else {
-			System.out.println("Вне массива");
+			System.out.println("Р’РЅРµ РјР°СЃСЃРёРІР°");
 		}
 		
 		while (true) {
-			System.out.println("Введите p");
+			System.out.println("Р’РІРµРґРёС‚Рµ p");
 			if (input.hasNextInt()) {
 				p  = input.nextInt();
 				break;
 			} else {
-				System.out.println(input.next() + " не число");
+				System.out.println(input.next() + " РЅРµ С‡РёСЃР»Рѕ");
 			}
 		}
 		
@@ -88,7 +88,7 @@ public class Task23 {
 				System.out.print("A[" + p + "]" + "[" + j + "]= " + a[p][j] + "      ");
 			}
 		} else {
-			System.out.println("Вне массива");
+			System.out.println("Р’РЅРµ РјР°СЃСЃРёРІР°");
 		}
 		input.close();
 	}

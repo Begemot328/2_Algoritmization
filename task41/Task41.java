@@ -5,8 +5,8 @@ import java.util.Scanner;
 import by.module2.common.CommonTools;
 import by.module2.common.Types;
 
-/*	Task 41 - Написать метод(методы) для нахождения наибольшего общего делителя и наименьшего общего кратного двух
-натуральных чисел
+/*	Task 41 - РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹) РґР»СЏ РЅР°С…РѕР¶РґРµРЅРёСЏ РЅР°РёР±РѕР»СЊС€РµРіРѕ РѕР±С‰РµРіРѕ РґРµР»РёС‚РµР»СЏ Рё РЅР°РёРјРµРЅСЊС€РµРіРѕ РѕР±С‰РµРіРѕ РєСЂР°С‚РЅРѕРіРѕ РґРІСѓС…
+РЅР°С‚СѓСЂР°Р»СЊРЅС‹С… С‡РёСЃРµР»
  * 
  * 
  */
@@ -23,7 +23,7 @@ public class Task41 {
 		a = 0;
 		b = 0;
 		
-		// Ввод чисел 				
+		// Р’РІРѕРґ С‡РёСЃРµР» 				
 		Scanner input = new Scanner(System.in);
 		try {
 			a  = (int) CommonTools.readBetween(input, "a", Types.INT, CommonTools.ZERO, 
@@ -35,22 +35,22 @@ public class Task41 {
 			}
 		input.close();
 		
-		// поиск НОК и НОД
+		// РїРѕРёСЃРє РќРћРљ Рё РќРћР”
 		nOK = getNOK(a, b);
 		nOD = getNOD(a, b);
 		
-		// 	вывод результатов
-		System.out.println("результаты");
+		// 	РІС‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ
+		System.out.println("СЂРµР·СѓР»СЊС‚Р°С‚С‹");
 		if (nOK == 0) {
-			System.out.println("НОК не найдено");
+			System.out.println("РќРћРљ РЅРµ РЅР°Р№РґРµРЅРѕ");
 		} else {
-			System.out.println("НОК = " + nOK);
+			System.out.println("РќРћРљ = " + nOK);
 		}
-		System.out.println("результаты");
+		System.out.println("СЂРµР·СѓР»СЊС‚Р°С‚С‹");
 		if (nOD == 0) {
-			System.out.println("НОД не найдено");
+			System.out.println("РќРћР” РЅРµ РЅР°Р№РґРµРЅРѕ");
 		} else {
-			System.out.println("НОД = " + nOD);
+			System.out.println("РќРћР” = " + nOD);
 		}
 	}
 	
