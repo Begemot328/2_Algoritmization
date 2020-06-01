@@ -3,7 +3,7 @@ package by.module2.task11;
 import java.util.Scanner;
 
 /*  @author Yury Zmushko
- * 	Task 1.1. В массив A [N] занесены натуральные числа. Найти сумму тех элементов, которые кратны данному К.
+ * 	Task 1.1. Р’ РјР°СЃСЃРёРІ A [N] Р·Р°РЅРµСЃРµРЅС‹ РЅР°С‚СѓСЂР°Р»СЊРЅС‹Рµ С‡РёСЃР»Р°. РќР°Р№С‚Рё СЃСѓРјРјСѓ С‚РµС… СЌР»РµРјРµРЅС‚РѕРІ, РєРѕС‚РѕСЂС‹Рµ РєСЂР°С‚РЅС‹ РґР°РЅРЅРѕРјСѓ Рљ.
  * 
  */
 
@@ -27,7 +27,7 @@ public class Task11 {
 			}
 			i++;
 		}
-		System.out.println("Сумма чисел, кратных " + k + " = " + sum);
+		System.out.println("РЎСѓРјРјР° С‡РёСЃРµР», РєСЂР°С‚РЅС‹С… " + k + " = " + sum);
 	}
 	
 	public static boolean checkMultiple(int a, int k) {
